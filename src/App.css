@@ -28,3 +28,7 @@
 .App-link {
   color: #b2ba26;
 }
+.App-image {
+  max-width: 100hw;
+  max-height: 70vh;
+}

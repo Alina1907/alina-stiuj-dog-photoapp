@@ -4,6 +4,8 @@ import Main from './Main';
 import Info from './Info';
 import { Header } from './Header';
 import Footer from './Footer';
+import Dog from './Dog';
+import SelectDog from './SelectDog';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Routes>
               <Route path="/" element={<Main />} /> 
               <Route path="/info" element={<Info />}></Route>
+              <Route path="/dog" element={<Dog />}></Route>
+              <Route path="/select-dog" element={<SelectDog />}></Route>
           </Routes>
         <Footer></Footer>
       </BrowserRouter>
