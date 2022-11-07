@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Dog from "./Dog";
 var apiUrl = "https://dog.ceo/api/breeds/list/all";
 function SelectDog() {
   const [dogs, setDogs] = useState([]);
@@ -17,7 +18,6 @@ function SelectDog() {
   const [url, setUrl] = useState([]);
   function handleSubmit(event) {
     setUrl("https://dog.ceo/api/breed/" + selection + "/images/random");
-    console.log("https://dog.ceo/api/breed/" + selection + "/images/random");
     event.preventDefault();
   }
 
@@ -34,6 +34,8 @@ function SelectDog() {
         <input type="submit" />
       </form>
       <p> The dog you selected: {selection}</p>
+      {/* Afisam aceeasi componenta Dog, cu url-ul bazat pe selectia user-ului. */}
+      <Dog url={url} /> 
       <p>Find random pictures of your selection here: {url}</p>
     </div>
   );
